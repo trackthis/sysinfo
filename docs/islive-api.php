@@ -64,8 +64,8 @@ function sum($list) {
 
 // Build output
 die(json_encode(array(
-   '0' => $avg['0']['rtt'],
-   '1' => sum($avg[ '1'])/max(1,count($avg[ '1'])),
-   '5' => sum($avg[ '5'])/max(1,count($avg[ '5'])),
-  '15' => sum($avg['15'])/max(1,count($avg['15'])),
+   '0' => round($avg['0']['rtt']*1000),
+   '1' => round(sum($avg[ '1'])/max(1,count($avg[ '1']))*1000),
+   '5' => round(sum($avg[ '5'])/max(1,count($avg[ '5']))*1000),
+  '15' => round(sum($avg['15'])/max(1,count($avg['15']))*1000),
 )));
