@@ -1,0 +1,14 @@
+{
+    "name": "trackthis/sysinfo",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Robin Bron",
+            "email": "robin@finwo.nl"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "netresearch/jsonmapper": "dev-master"
+    }
+}
