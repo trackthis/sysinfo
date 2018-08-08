@@ -33,7 +33,7 @@ class Entity {
         if (is_string($data)) $data = json_decode($data);
         if (!is_null($data))  $mapper->map($data, $this);
 //        if (!$this->_id) $this->_id = self::generateRandomString(48);
-        if (!$this->_id) $this->_id = uniqid();
+        if (!$this->_id) $this->_id = uniqid('',true);
     }
 
     /**
