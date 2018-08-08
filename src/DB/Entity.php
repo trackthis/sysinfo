@@ -4,16 +4,6 @@ namespace DB;
 
 class Entity {
 
-//    private static function generateRandomString($length = 10) {
-//        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-//        $charactersLength = strlen($characters);
-//        $randomString = '';
-//        for ($i = 0; $i < $length; $i++) {
-//            $randomString .= $characters[rand(0, $charactersLength - 1)];
-//        }
-//        return $randomString;
-//    }
-
     /**
      * @var string
      */
@@ -32,7 +22,6 @@ class Entity {
         if (is_array($data))  $data = json_encode($data);
         if (is_string($data)) $data = json_decode($data);
         if (!is_null($data))  $mapper->map($data, $this);
-//        if (!$this->_id) $this->_id = self::generateRandomString(48);
         if (!$this->_id) $this->_id = uniqid('',true);
     }
 
