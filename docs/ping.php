@@ -73,6 +73,7 @@ foreach ($data as $url => $list ) {
 }
 
 // Output our findings
+header('Content-Type: application/json');
 echo json_encode($data);
 
 //// Fetch url list
