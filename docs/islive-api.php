@@ -63,6 +63,7 @@ function sum($list) {
 }
 
 // Build output
+header('Content-Type: application/json');
 die(json_encode(array(
    '0' => round($avg['0']['rtt']*1000),
    '1' => round(sum($avg[ '1'])/max(1,count($avg[ '1']))*1000),
